@@ -99,7 +99,7 @@ person = {
 
 @app.route('/')
 def cv(person=person):
-    return render_template('index.html', person=person)
+    return render_template('resume.html', person=person)
 
 
 @app.route('/callback', methods=['POST', 'GET'])
