@@ -15,7 +15,7 @@
 		<div class="container">
 			<div class="picture-resume-wrapper">
         <div class="picture-resume">
-        <span><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="" /></span>
+        <span><img src="static/img/picture.jpg" alt="" /></span>
         <svg version="1.1" viewBox="0 0 350 350">
   
   <defs>
@@ -48,36 +48,36 @@
          <div class="clearfix"></div>
  </div>
       <div class="name-wrapper">
-        <h1>John <br/>Anderson</h1><!-- YOUR NAME AND LAST NAME  -->
+        <h1>{{person.first_name}} <br/>{{person.last_name}}</h1><!-- YOUR NAME AND LAST NAME  -->
       </div>
       <div class="clearfix"></div>
       <div class="contact-info clearfix">
       	<ul class="list-titles">
-      		<li>Call</li>
-      		<li>Mail</li>
-      		<li>Web</li>
-      		<li>Home</li>
+      		<li>电话</li>
+      		<li>邮箱</li>
+      		<li>网页</li>
+      		<li>家庭住址</li>
       	</ul>
         <ul class="list-content ">
-        	<li>+34 123 456 789</li> <!-- YOUR PHONE NUMBER  -->
-        	<li>j.anderson@gmail.com</li> <!-- YOUR EMAIL -->
-        	<li><a href="#">janderson.com</a></li> <!-- YOUR WEBSITE  -->
-        	<li>Los Angeles, CA</li> <!-- YOUR STATE AND COUNTRY  -->
+        	<li>{{person.tel}}</li> <!-- YOUR PHONE NUMBER  -->
+        	<li>{{person.email}}</li> <!-- YOUR EMAIL -->
+        	<li><a href="https://github.com">GitHub</a></li> <!-- YOUR WEBSITE  -->
+        	<li>{{person.address}}</li> <!-- YOUR STATE AND COUNTRY  -->
         </ul>
       </div>
       <div class="contact-presentation"> <!-- YOUR PRESENTATION RESUME  -->
-      	<p><span class="bold">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod congue nisi, nec consequat quam. In consectetur faucibus turpis eget laoreet. Sed nec imperdiet purus. </p>
+      	<p><span class="bold">性格介绍：  </span>{{person.introduce}}</p>
       </div>
       <div class="contact-social clearfix">
       	<ul class="list-titles">
-      		<li>Twitter</li>
-      		<li>Dribbble</li>
-      		<li>Codepen</li>
+      		<li>Flask用法博客</li>
+      		<li>部署flask到heroku</li>
+      		<li>解决Invalid username or password</li>
       	</ul>
         <ul class="list-content"> <!-- REMEMBER TO PUT THE URL ON THE HREF TAG  -->
-      		<li><a href="">@janderson</a></li> <!-- YOUR TWITTER USER  -->
-      		<li><a href="">janderson</a></li> <!-- YOUR DRIBBBLE USER  -->
-      		<li><a href="">janderson</a></li> <!-- YOUR BEHANCE USER  -->
+      		<li><a href="https://www.cnblogs.com/sowhat1412/p/12734246.html">Flask用法博客</a></li> <!-- YOUR TWITTER USER  -->
+      		<li><a href="https://www.cnblogs.com/OnlyMeMe/p/14910989.html">部署flask到heroku</a></li> <!-- YOUR DRIBBBLE USER  -->
+      		<li><a href="https://blog.csdn.net/jinxinxin1314/article/details/108318998">解决Invalid username or password</a></li> <!-- YOUR BEHANCE USER  -->
       	</ul>
       </div>
 		</div>
@@ -85,66 +85,66 @@
   
   <section class="experience section-padding">
   	<div class="container">
-  		<h3 class="experience-title">Experience</h3>
-      
+  		<h3 class="experience-title">工作经历</h3>
+
       <div class="experience-wrapper">
+          {% for experience in person.experiences%}
       	<div class="company-wrapper clearfix">
-      		<div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-          <div class="time">Nov 2012 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+      		<div class="experience-title">{{experience.company}}</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+          <div class="time">{{experience.timeframe}}</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
       	</div>
         
         <div class="job-wrapper clearfix">
-        	<div class="experience-title">Front End Developer </div> <!-- JOB TITLE  -->
+        	<div class="experience-title">{{experience.job}} </div> <!-- JOB TITLE  -->
           <div class="company-description">
-          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>  <!-- JOB DESCRIPTION  -->
+          	<p>{{experience.description}}</p>  <!-- JOB DESCRIPTION  -->
           </div>
         </div>
+          {% endfor %}
         
-        <div class="company-wrapper clearfix">
-      		<div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-          <div class="time">Nov 2010 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-      	</div>
-        
-         <div class="job-wrapper clearfix">
-        	<div class="experience-title">Freelance, Web Designer / Web Developer</div> <!-- JOB TITLE  -->
-          <div class="company-description">
-          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>  <!-- JOB DESCRIPTION  -->
-          </div>
-        </div>
-        
-        <div class="company-wrapper clearfix">
-      		<div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-          <div class="time">Nov 2009 - Nov 2010</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-      	</div> 
-        
-         <div class="job-wrapper clearfix">
-        	<div class="experience-title">Web Designer </div> <!-- JOB TITLE  -->
-          <div class="company-description">
-          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>   <!-- JOB DESCRIPTION  -->
-          </div>
-        </div>
+<!--        <div class="company-wrapper clearfix">-->
+<!--      		<div class="experience-title">Company name</div> &lt;!&ndash; NAME OF THE COMPANY YOUWORK WITH  &ndash;&gt;-->
+<!--          <div class="time">Nov 2010 - Present</div> &lt;!&ndash; THE TIME YOU WORK WITH THE COMPANY  &ndash;&gt;-->
+<!--      	</div>-->
+<!--        -->
+<!--         <div class="job-wrapper clearfix">-->
+<!--        	<div class="experience-title">Freelance, Web Designer / Web Developer</div> &lt;!&ndash; JOB TITLE  &ndash;&gt;-->
+<!--          <div class="company-description">-->
+<!--          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>  &lt;!&ndash; JOB DESCRIPTION  &ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="company-wrapper clearfix">-->
+<!--      		<div class="experience-title">Company name</div> &lt;!&ndash; NAME OF THE COMPANY YOUWORK WITH  &ndash;&gt;-->
+<!--          <div class="time">Nov 2009 - Nov 2010</div> &lt;!&ndash; THE TIME YOU WORK WITH THE COMPANY  &ndash;&gt;-->
+<!--      	</div> -->
+<!--        -->
+<!--         <div class="job-wrapper clearfix">-->
+<!--        	<div class="experience-title">Web Designer </div> &lt;!&ndash; JOB TITLE  &ndash;&gt;-->
+<!--          <div class="company-description">-->
+<!--          	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>   &lt;!&ndash; JOB DESCRIPTION  &ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
         
       </div><!--Skill experience-->
       
       <div class="section-wrapper clearfix">
-      	<h3 class="section-title">Skills</h3>  <!-- YOUR SET OF SKILLS  -->
+      	<h3 class="section-title">技能</h3>  <!-- YOUR SET OF SKILLS  -->
         	<ul>
-        		<li class="skill-percentage">HTML / HTML5</li>
-        		<li class="skill-percentage">CSS / CSS3 / SASS / LESS</li>
-        		<li class="skill-percentage">Javascript</li>
-        		<li class="skill-percentage">Jquery</li>
-        		<li class="skill-percentage">Wordpress</li>
-        		<li class="skill-percentage">Photoshop</li>
+        		<li class="skill-percentage">python</li>
+        		<li class="skill-percentage">C#</li>
+        		<li class="skill-percentage">数据分析</li>
+        		<li class="skill-percentage">unity</li>
+        		<li class="skill-percentage">可视化</li>
+        		<li class="skill-percentage">爬虫</li>
             
         	</ul>
         
       </div>
       
       <div class="section-wrapper clearfix">
-        <h3 class="section-title">Hobbies</h3>  <!-- DESCRIPTION OF YOUR HOBBIES -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo in, dignissim magna.</p> 
+        <h3 class="section-title">爱好</h3>  <!-- DESCRIPTION OF YOUR HOBBIES -->
+        <p>{{person.hobby}}</p>
       </div>
       
   	</div>

@@ -11,13 +11,18 @@ import csv, re, operator
 app = Flask(__name__)
 
 person = {
-    'first_name': 'Nohossat',
-    'last_name': 'TRAORE',
-    'address': '9 rue Léon Giraud · PARIS · FRANCE',
-    'job': 'Web developer',
-    'tel': '0678282923',
-    'email': 'nohossat.tra@yahoo.com',
-    'description': 'Suite à une expérience internationale en développement web et dans le domaine des arts, l’impact de l’intelligence artificielle dans nos vies me surprend de jour en jour. \n Aujourd’hui, je souhaite changer de cap et comprendre les secrets que recèlent nos données. J’aimerais mettre à profit ces découvertes au service des entreprises/associations à dimension sociale.',
+    'first_name': '李',
+    'last_name': '白',
+    'address': '湖北省黄石市',
+    'tel': '123456',
+    'email': '12345@qq.com',
+    # 'web': 'https://github.com',
+    'web1': 'https://www.cnblogs.com/sowhat1412/p/12734246.html',
+    'web2': 'https://dashboard.heroku.com',
+    'web3': 'https://dashboard.heroku.com',
+    'introduce': '性格开朗，乐于助人',
+    'description': '',
+    'hobby': '电子游戏 ',
     'social_media': [
         {
             'link': 'https://www.facebook.com/nono',
@@ -39,23 +44,23 @@ person = {
     'img': 'img/img_nono.jpg',
     'experiences': [
         {
-            'title': 'Web Developer',
-            'company': 'AZULIK',
-            'description': 'Project manager and lead developer for several AZULIK websites.',
-            'timeframe': 'July 2018 - November 2019'
+            'company': '某公司',
+            'timeframe': '2019.1-2020.1',
+            'job': '前端',
+            'description': '网页'
         },
         {
-            'title': 'Freelance Web Developer',
-            'company': 'Independant',
-            'description': 'Create Wordpress websites for small and medium companies. ',
-            'timeframe': 'February 2017 - Present'
+            'company': '某某公司',
+            'timeframe': '2020.1-2021.1',
+            'job': '后端',
+            'description': '商城'
         },
         {
-            'title': 'Sharepoint Intern',
-            'company': 'ALTEN',
-            'description': 'Help to manage a 600 Sharepoint sites platform (audit, migration to Sharepoint newer versions)',
-            'timeframe': 'October 2015 - October 2016'
-        }
+            'company': '某某某公司',
+            'timeframe': '2020.1-2021.6',
+            'job': '全栈',
+            'description': '购物程序'
+        },
     ],
     'education': [
         {
