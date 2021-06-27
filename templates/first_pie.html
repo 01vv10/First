@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="16da1422d262454f8b74343bf2d0a842" class="chart-container" style="width:900px; height:500px;"></div>
+    <h2>数据集中top15的地区确诊人数，从中可以看出湖北确诊人数占确诊总人数的2/3左右</h2>
+    <script>
+        var chart_16da1422d262454f8b74343bf2d0a842 = echarts.init(
+            document.getElementById('16da1422d262454f8b74343bf2d0a842'), 'white', {renderer: 'canvas'});
+        var option_16da1422d262454f8b74343bf2d0a842 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "Hubei",
+                    "value": 16678.0
+                },
+                {
+                    "name": "Zhejiang",
+                    "value": 895.0
+                },
+                {
+                    "name": "Guangdong",
+                    "value": 870.0
+                },
+                {
+                    "name": "Henan",
+                    "value": 764.0
+                },
+                {
+                    "name": "Hunan",
+                    "value": 661.0
+                },
+                {
+                    "name": "Jiangxi",
+                    "value": 548.0
+                },
+                {
+                    "name": "Anhui",
+                    "value": 530.0
+                },
+                {
+                    "name": "Chongqing",
+                    "value": 366.0
+                },
+                {
+                    "name": "Jiangsu",
+                    "value": 341.0
+                },
+                {
+                    "name": "Sichuan",
+                    "value": 301.0
+                },
+                {
+                    "name": "Shandong",
+                    "value": 298.0
+                },
+                {
+                    "name": "Shanghai",
+                    "value": 233.0
+                },
+                {
+                    "name": "Beijing",
+                    "value": 228.0
+                },
+                {
+                    "name": "Fujian",
+                    "value": 194.0
+                },
+                {
+                    "name": "Heilongjiang",
+                    "value": 190.0
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Hubei",
+                "Zhejiang",
+                "Guangdong",
+                "Henan",
+                "Hunan",
+                "Jiangxi",
+                "Anhui",
+                "Chongqing",
+                "Jiangsu",
+                "Sichuan",
+                "Shandong",
+                "Shanghai",
+                "Beijing",
+                "Fujian",
+                "Heilongjiang"
+            ],
+            "selected": {}
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    }
+};
+        chart_16da1422d262454f8b74343bf2d0a842.setOption(option_16da1422d262454f8b74343bf2d0a842);
+    </script>
+</body>
+</html>

@@ -11,6 +11,7 @@ import csv, re, operator
 app = Flask(__name__)
 
 person = {
+    'name': '你好，我是李白',
     'first_name': '李',
     'last_name': '白',
     'address': '湖北省黄石市',
@@ -114,7 +115,52 @@ def cb():
 
 @app.route('/chart')
 def index():
-    return render_template('chartsajax.html', graphJSON=gm())
+    return render_template('first_bar.html', graphJSON=gm())
+
+
+@app.route('/chart1')
+def index1():
+    return render_template('first_boxplot.html', graphJSON=gm())
+
+
+@app.route('/chart2')
+def index2():
+    return render_template('first_effectscatter.html', graphJSON=gm())
+
+
+@app.route('/chart3')
+def index3():
+    return render_template('first_funnel.html', graphJSON=gm())
+
+
+@app.route('/chart4')
+def index4():
+    return render_template('first_line.html', graphJSON=gm())
+
+
+@app.route('/chart5')
+def index5():
+    return render_template('first_map.html', graphJSON=gm())
+
+
+@app.route('/chart6')
+def index6():
+    return render_template('first_pie.html', graphJSON=gm())
+
+
+@app.route('/chart7')
+def index7():
+    return render_template('first_polar.html', graphJSON=gm())
+
+
+@app.route('/chart8')
+def index8():
+    return render_template('first_scatter.html', graphJSON=gm())
+
+
+@app.route('/chart9')
+def index9():
+    return render_template('first_worldcloud.html', graphJSON=gm())
 
 
 def gm(country='United Kingdom'):

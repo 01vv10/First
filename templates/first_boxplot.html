@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="94a67039536d4896a06b429581f9121d" class="chart-container" style="width:900px; height:500px;"></div>
+    <h2>选取2020.02.04和2020.01.22日的确诊和治愈来对比，从中可以看出确诊人数明显大幅上升，治愈人数只占少部分。由此可见，疫情在快速扩散。</h2>
+    <script>
+        var chart_94a67039536d4896a06b429581f9121d = echarts.init(
+            document.getElementById('94a67039536d4896a06b429581f9121d'), 'white', {renderer: 'canvas'});
+        var option_94a67039536d4896a06b429581f9121d = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "boxplot",
+            "name": "02/04/2020 22:00:00",
+            "data": [
+                [
+                    1.0,
+                    2.0,
+                    14.0,
+                    138.75,
+                    16678.0
+                ],
+                [
+                    0.0,
+                    0.0,
+                    0.0,
+                    4.25,
+                    522.0
+                ]
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                }
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            }
+        },
+        {
+            "type": "boxplot",
+            "name": "01/22/2020 12:00:00",
+            "data": [
+                [
+                    0.0,
+                    0.75,
+                    1.0,
+                    4.0,
+                    444.0
+                ],
+                [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                }
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "02/04/2020 22:00:00",
+                "01/22/2020 12:00:00"
+            ],
+            "selected": {
+                "02/04/2020 22:00:00": true,
+                "01/22/2020 12:00:00": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "expr1",
+                "expr2"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "BoxPlot\u56fe",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_94a67039536d4896a06b429581f9121d.setOption(option_94a67039536d4896a06b429581f9121d);
+    </script>
+</body>
+</html>

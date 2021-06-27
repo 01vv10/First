@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="3608dac6a3a0445b84f93aa4dc7685f3" class="chart-container" style="width:900px; height:500px;"></div>
+    <h2>数据集中top15的确诊人数所在的省份，从漏斗图中可以看出，确诊人数最多的是湖北，病毒爆发地为湖北。</h2>
+    <script>
+        var chart_3608dac6a3a0445b84f93aa4dc7685f3 = echarts.init(
+            document.getElementById('3608dac6a3a0445b84f93aa4dc7685f3'), 'white', {renderer: 'canvas'});
+        var option_3608dac6a3a0445b84f93aa4dc7685f3 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "funnel",
+            "name": "\u786e\u8bca",
+            "data": [
+                {
+                    "name": "Hubei",
+                    "value": 16678.0
+                },
+                {
+                    "name": "Zhejiang",
+                    "value": 895.0
+                },
+                {
+                    "name": "Guangdong",
+                    "value": 870.0
+                },
+                {
+                    "name": "Henan",
+                    "value": 764.0
+                },
+                {
+                    "name": "Hunan",
+                    "value": 661.0
+                },
+                {
+                    "name": "Jiangxi",
+                    "value": 548.0
+                },
+                {
+                    "name": "Anhui",
+                    "value": 530.0
+                },
+                {
+                    "name": "Chongqing",
+                    "value": 366.0
+                },
+                {
+                    "name": "Jiangsu",
+                    "value": 341.0
+                },
+                {
+                    "name": "Sichuan",
+                    "value": 301.0
+                },
+                {
+                    "name": "Shandong",
+                    "value": 298.0
+                },
+                {
+                    "name": "Shanghai",
+                    "value": 233.0
+                },
+                {
+                    "name": "Beijing",
+                    "value": 228.0
+                },
+                {
+                    "name": "Fujian",
+                    "value": 194.0
+                },
+                {
+                    "name": "Heilongjiang",
+                    "value": 190.0
+                }
+            ],
+            "sort": "ascending",
+            "gap": 0,
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Heilongjiang",
+                "Guangdong",
+                "Hunan",
+                "Fujian",
+                "Zhejiang",
+                "Chongqing",
+                "Shanghai",
+                "Jiangsu",
+                "Sichuan",
+                "Shandong",
+                "Beijing",
+                "Henan",
+                "Hubei",
+                "Jiangxi",
+                "Anhui"
+            ],
+            "selected": {
+                "Hubei": true,
+                "Zhejiang": true,
+                "Guangdong": true,
+                "Henan": true,
+                "Hunan": true,
+                "Jiangxi": true,
+                "Anhui": true,
+                "Chongqing": true,
+                "Jiangsu": true,
+                "Sichuan": true,
+                "Shandong": true,
+                "Shanghai": true,
+                "Beijing": true,
+                "Fujian": true,
+                "Heilongjiang": true
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    }
+};
+        chart_3608dac6a3a0445b84f93aa4dc7685f3.setOption(option_3608dac6a3a0445b84f93aa4dc7685f3);
+    </script>
+</body>
+</html>
