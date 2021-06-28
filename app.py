@@ -105,7 +105,7 @@ person = {
 
 @app.route('/')
 def cv(person=person):
-    return render_template('resume.html', person=person)
+    return render_template('indexa.html', person=person)
 
 
 @app.route('/callback', methods=['POST', 'GET'])
@@ -114,52 +114,52 @@ def cb():
 
 
 @app.route('/chart')
-def index():
+def first_bar():
     return render_template('first_bar.html', graphJSON=gm())
 
 
 @app.route('/chart1')
-def index1():
+def first_boxplot():
     return render_template('first_boxplot.html', graphJSON=gm())
 
 
 @app.route('/chart2')
-def index2():
+def first_effectscatter():
     return render_template('first_effectscatter.html', graphJSON=gm())
 
 
 @app.route('/chart3')
-def index3():
+def first_funnel():
     return render_template('first_funnel.html', graphJSON=gm())
 
 
 @app.route('/chart4')
-def index4():
+def first_line():
     return render_template('first_line.html', graphJSON=gm())
 
 
 @app.route('/chart5')
-def index5():
+def first_map():
     return render_template('first_map.html', graphJSON=gm())
 
 
 @app.route('/chart6')
-def index6():
+def first_pie():
     return render_template('first_pie.html', graphJSON=gm())
 
 
 @app.route('/chart7')
-def index7():
+def first_polar():
     return render_template('first_polar.html', graphJSON=gm())
 
 
 @app.route('/chart8')
-def index8():
+def first_scatter():
     return render_template('first_scatter.html', graphJSON=gm())
 
 
 @app.route('/chart9')
-def index9():
+def first_worldcloud():
     return render_template('first_worldcloud.html', graphJSON=gm())
 
 
